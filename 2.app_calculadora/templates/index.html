@@ -1,0 +1,39 @@
+<!--Index.html-->
+{% extends "base.html"%}
+
+{%block content%}
+<h1 class="text-center fw-normal">Calculadora Aritmetica</h1> 
+
+          <div class="card p-5">
+            <p>Ingrese los datos numericos</p>
+            <form action="/" method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="number" class="form-control" name="n1" placeholder="Ingresa el primer numero" aria-label="Ingresa el primer numero" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="number" class="form-control" name="n2" placeholder="Ingresa el segundo numero" aria-label="Ingresa el segundo numero" required>
+                    </div>
+                 </div>   
+                 <div class="row py-3">
+                    <div class="col-md-12">
+                       <center><button type="submit" class="btn btn-primary">Guardar</button></center>
+                    </div>
+                 </div>
+                </form>
+            
+    
+        <div class="row py-2">
+            <div class="alert alert-primary" role="alert">
+            <div class="col fw-semibold">
+                <h5>La Suma es: {{total_suma}}</h5>
+                <h5>La Resta es: {{total_resta}}</h5>
+                <h5>La Multiplicación es: {{total_multiplicacion}}</h5>
+                <h5>La Division es: {{total_division}}</h5>
+            </div>
+        </div>
+        </div>
+    </div>
+
+{%endblock%}

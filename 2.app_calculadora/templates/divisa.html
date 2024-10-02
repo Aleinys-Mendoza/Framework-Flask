@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+
+{%block content%}
+<h1 class="text-center fw-normal">Calculadora Divisas</h1> 
+          <div class="card p-5">
+            <form action="/divisa" method="post">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 ">
+                        <p>Ingrese el peso  Colombiano</p>
+                        <input type="number" class="form-control" name="n" placeholder="Ingresa monto de peso Colombiano" aria-label="Ingresa monto de peso Colombiano" required>
+                    </div>
+
+                 </div>   
+                 <div class="row py-3">
+                    <div class="col-md-12">
+                       <center><button type="submit" class="btn btn-primary">Guardar</button></center>
+                    </div>
+                 </div>
+                </form>
+            
+    
+        <div class="row py-2">
+            <div class="alert alert-primary" role="alert">
+            <div class="col fw-semibold">
+                <h5>La conversion de pesos colombianos a dolares es: {{total_divisa}}</h5>
+                <h5>La conversion de pesos colombianos a pesos Mexicano es: {{total_mexico}}</h5>
+            </div>
+        </div>
+        </div>
+    </div>
+
+{%endblock%}

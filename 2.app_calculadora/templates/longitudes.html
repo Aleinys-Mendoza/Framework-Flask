@@ -1,0 +1,36 @@
+{% extends "base.html"%}
+
+{%block content%}
+<h1 class="text-center fw-normal">Calculadora Longitudes</h1> 
+          <div class="card p-5">
+            <form action="/longitudes" method="post">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 ">
+                        <p>Ingrese el valor de longitud</p>
+                        <input type="number" class="form-control" name="v" placeholder="Ingresa un valor en Kilogramo" aria-label="Ingresa un valor en Kilogramo" required>
+                    </div>
+
+                 </div>   
+                 <div class="row py-3">
+                    <div class="col-md-12">
+                       <center><button type="submit" class="btn btn-primary">Guardar</button></center>
+                    </div>
+                 </div>
+                </form>
+            
+    
+        <div class="row py-2">
+            <div class="alert alert-primary" role="alert">
+            <div class="col fw-semibold">
+                <h5>La conversion de kg a hectómetro  es: {{total_hectometro}} hm</h5>
+                <h5>La conversion de kg a decámetro  es: {{total_decametro}} dam</h5>
+                <h5>La conversion de kg a metro  es: {{total_metro}} m</h5>
+                <h5>La conversion de kg a decímetro  es: {{total_decimetro}} dm</h5>
+                <h5>La conversion de kg a centimetro  es: {{total_centimetro}} cm</h5>
+                <h5>La conversion de kg a milimetro  es: {{total_milimetro}} mm</h5>
+            </div>
+        </div>
+        </div>
+    </div>
+
+{%endblock%}
