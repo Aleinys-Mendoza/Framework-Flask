@@ -49,7 +49,8 @@ def lista_empleados():
 def detalleEmpleado(idEmpleado=None):
     if 'conectado' in session:
        #verificamos si el parametro idEmpleado es None o no esta presente en la URL
-        return redirect(url_for('inicio'))
+        if idEmpleado is None:
+          return redirect(url_for('inicio'))
     
     else: 
         flash('Primero debes Iniciar sesion.','error')
@@ -74,6 +75,7 @@ def viewEditarEmpleado(id):
             return render_template(f'{PATH_URL}/form_empleado_update.html', respuestaEmpleado=respuestaEmpleado)
         else:
             flash('El empleado no existe.', 'error')
+            return redirect(url_for('inicio'))
 
     else: 
         flash('Primero debes Iniciar sesion.','error')
